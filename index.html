@@ -1,12 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Awesome Website</title>
+    <title>Мой космический сайт</title>
+    <style>
+        /* Общие стили */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            color: #fff;
+        }
+
+        /* Космический фон с фиолетовыми и синими оттенками */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.w3schools.com/w3images/space.jpg') no-repeat center center fixed;
+            background-size: cover;
+            filter: brightness(50%);
+            animation: moveBackground 60s linear infinite;
+            z-index: -1;
+        }
+
+        /* Динамичное движение фона */
+        @keyframes moveBackground {
+            0% { background-position: 0 0; }
+            100% { background-position: 500px 500px; }
+        }
+
+        /* Шапка */
+        header {
+            background: rgba(20, 20, 50, 0.8); /* Темно-синий оттенок */
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #eeeeee;
+        }
+
+        /* Навигация */
+        nav {
+            background: rgba(20, 20, 50, 0.9); /* Темно-синий оттенок */
+            overflow: hidden;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 12px 18px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #9b4f96;  /* Фиолетовый */
+            color: #fff;
+        }
+
+        /* Основное содержимое */
+        main {
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.7); /* Черный с прозрачностью */
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+            margin-top: 20px;
+        }
+
+        .content {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        p, ul {
+            font-size: 1.1em;
+            color: #ddd;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            padding: 8px 16px;
+            margin: 8px;
+            background: #333;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: #9b4f96;  /* Фиолетовый */
+        }
+
+        /* Подвал */
+        footer {
+            background: rgba(20, 20, 50, 0.9); /* Темно-синий оттенок */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Мобильная версия */
+        @media (max-width: 768px) {
+            nav a {
+                padding: 12px 15px;
+                font-size: 1em;
+            }
+
+            header h1 {
+                font-size: 2.2em;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Awesome Website!</h1>
-    <p>This is my homepage.</p>
+
+<!-- Космический фон -->
+<div class="background"></div>
+
+<!-- Шапка сайта -->
+<header>
+    <h1>Привет! Я — [Ваше имя]</h1>
+    <p>Добро пожаловать в мою космическую вселенную</p>
+</header>
+
+<!-- Навигация -->
+<nav>
+    <a href="#about">О себе</a>
+    <a href="#projects">Мои проекты</a>
+    <a href="#contacts">Контакты</a>
+    <a href="#social">Социальные сети</a>
+</nav>
+
+<!-- Основное содержимое -->
+<main>
+
+    <!-- Раздел "О себе" -->
+    <section id="about">
+        <div class="content">
+            <h2>О себе</h2>
+            <p>Привет! Меня зовут [Ваше имя], я увлекаюсь [Ваши увлечения]. Я создал этот сайт, чтобы поделиться своими проектами и информацией обо мне.</p>
+            <p>Я люблю [ваши хобби], и всегда стремлюсь к новому знанию и самосовершенствованию.</p>
+        </div>
+    </section>
+
+    <!-- Раздел "Мои проекты" -->
+    <section id="projects">
+        <div class="content">
+            <h2>Мои проекты</h2>
+            <p>Вот некоторые из моих проектов, которыми я горжусь:</p>
+            <ul>
+                <li><strong>Проект 1:</strong> Описание проекта 1.</li>
+                <li><strong>Проект 2:</strong> Описание проекта 2.</li>
+                <li><strong>Проект 3:</strong> Описание проекта 3.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Раздел "Контакты" -->
+    <section id="contacts">
+        <div class="content">
+            <h2>Контакты</h2>
+            <p>Вы можете связаться со мной через следующие каналы:</p>
+            <ul>
+                <li><strong>Email:</strong> example@mail.com</li>
+                <li><strong>Телефон:</strong> +7 (123) 456-7890</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Раздел "Социальные сети" -->
+    <section id="social">
+        <div class="content">
+            <h2>Мои социальные сети</h2>
+            <p>Следите за мной в социальных сетях:</p>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Подвал -->
+<footer>
+    <p>&copy; 2024 [Ваше имя]. Все права защищены.</p>
+</footer>
+
 </body>
 </html>
